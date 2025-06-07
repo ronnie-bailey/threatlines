@@ -1,0 +1,74 @@
+/* ========== TAG CLOUD STYLES ========== */
+.tag-categories {
+  display: grid;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.category {
+  border-left: 3px solid #3a7bd5;
+  padding-left: 1.2rem;
+}
+
+.category h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+  font-size: 1.4rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #e8f4ff;
+  border-radius: 24px;
+  font-size: var(--size, 0.95em);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #2c3e50;
+  border: 1px solid #b6d6ff;
+  white-space: nowrap;
+}
+
+.tag:hover {
+  background: #3a7bd5;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+}
+
+/* Frequency-based sizing */
+.tag[style*="--size:1.0em"] { font-size: 1em; }
+.tag[style*="--size:1.2em"] { font-size: 1.1em; background: #d1e7ff; }
+.tag[style*="--size:1.4em"] { font-size: 1.2em; background: #b6d6ff; }
+.tag[style*="--size:1.6em"] { font-size: 1.3em; background: #9bc5ff; font-weight: 500; }
+.tag[style*="--size:1.8em"] { font-size: 1.4em; background: #80b4ff; font-weight: 600; }
+
+/* Tag section styling */
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.post-date {
+  color: #6c757d;
+  font-size: 0.9rem;
+  min-width: 120px;
+  text-align: right;
+}
