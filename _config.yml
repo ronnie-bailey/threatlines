@@ -1,28 +1,28 @@
 title: "CyberPolicy Lab"
 description: "Security insights for geeks and chiefs"
-baseurl: ""
-url: "https://yourusername.github.io"
+baseurl: "/cyberpolicyblog"
+url: "https://ronnie-bailey.github.io"
+
 author:
   name: "Ronnie Bailey"
   title: "Cybersecurity Architect & Policy Advisor"
   bio: "10+ years securing enterprise systems while advising policymakers on technical implementations. Currently focused on AI governance and cloud identity management."
   credentials: ["CISSP", "CIPP/E"]
 
-# Build settings
 markdown: kramdown
 highlighter: rouge
+permalink: pretty
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Collections
 collections:
   posts:
     output: true
     permalink: /blog/:title/
 
-# Defaults
 defaults:
   - scope:
       path: ""
@@ -31,7 +31,6 @@ defaults:
       layout: "post"
       author: "Ronnie Bailey"
 
-# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -40,3 +39,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - README.md
