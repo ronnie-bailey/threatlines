@@ -757,3 +757,57 @@ body {
         padding: 1rem;
     }
 }
+
+
+
+/* Tag Cloud */
+.tag-cloud {
+  margin-bottom: 2rem;
+  line-height: 2;
+}
+
+.tag-cloud .tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  margin: 0.2rem;
+  background: #f0f5ff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Tag Sections */
+.tag-section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.tag-section h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3a7bd5;
+}
+
+.post-list li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-date {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Post Tags */
+.post-tags {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.post-tag {
+  background: #e8f4ff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
