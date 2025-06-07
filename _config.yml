@@ -4,7 +4,7 @@ baseurl: "/cyberpolicyblog"
 url: "https://ronnie-bailey.github.io"
 
 author:
-  name: "Ronnie Bailey"
+  name: "Ronnie Bailey" 
   title: "Cybersecurity Architect & Policy Advisor"
   bio: "10+ years securing enterprise systems while advising policymakers on technical implementations. Currently focused on AI governance and cloud identity management."
   credentials: ["CISSP", "CIPP/E"]
