@@ -170,17 +170,6 @@ layout: default
 </style>
 
 <div class="post-container">
-    {% if page.tags.size > 0 %}
-<div class="post-tags">
-  <strong>Tags:</strong>
-  {% for tag in page.tags %}
-    <a href="{{ '/tags' | relative_url }}#{{ tag | slugify }}" 
-       class="post-tag">
-      {{ tag }}
-    </a>
-  {% endfor %}
-</div>
-{% endif %}
     <article class="post-content">
         <header class="post-header">
             <div class="post-meta">
