@@ -1,5 +1,16 @@
 <!-- Dynamic Tag Cloud that accumulates based on usage -->
 <div class="tag-cloud">
+
+      {% assign tags = site.tags | sort %}
+  {% for tag in tags %}
+    <a href="{{ '/tags' | relative_url }}#{{ tag[0] | slugify }}" 
+       class="tag" 
+       data-count="{{ tag[1].size }}">
+      {{ tag[0] }} ({{ tag[1].size }})
+    </a>
+  {% endfor %}
+
+    
     <div class="tag-list">
         {% comment %}
         Manual definition of popular tags with counts for reliable rendering
