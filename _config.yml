@@ -1,0 +1,32 @@
+title: "CyberPolicy Lab"
+description: "Security insights for geeks and chiefs"
+baseurl: ""
+url: "https://yourusername.github.io"
+author:
+  name: "Ronnie Bailey"
+  title: "Cybersecurity Architect & Policy Advisor"
+  bio: "10+ years securing enterprise systems while advising policymakers"
+  credentials: ["CISSP", "CIPP/E"]
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Ronnie Bailey"
