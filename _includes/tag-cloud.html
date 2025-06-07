@@ -1,0 +1,52 @@
+<!-- Dynamic Tag Cloud that accumulates based on usage -->
+<div class="tag-cloud">
+    <div class="tag-list">
+        {% comment %}
+        Manual definition of popular tags with counts for reliable rendering
+        Format: tag-name:count
+        {% endcomment %}
+
+        {% assign popular_tags = 'zero-trust:8,cloud-security:9,surveillance-pricing:6,data-privacy:7,identity-management:6,ai-regulation:4,compliance:4,threat-analysis:5,incident-response:3,policy-analysis:3,facial-recognition:2,retail-surveillance:2,crowdstrike:3,kroger:2,microsoft:4,azure:5,aws:4,okta:3,cyberark:2,gdpr:3,ftc:2,cissp:2,cipp:2' | split: ',' %}
+
+        {% for tag_data in popular_tags %}
+            {% assign tag_parts = tag_data | split: ':' %}
+            {% assign tag_name = tag_parts[0] %}
+            {% assign tag_count = tag_parts[1] | plus: 0 %}
+            
+            {% comment %}
+            Determine tag size based on frequency
+            1-2 uses: size-1 (smallest)
+            3-4 uses: size-2 
+            5-6 uses: size-3
+            7-8 uses: size-4
+            9+ uses: size-5 (largest)
+            {% endcomment %}
+            
+            {% if tag_count >= 9 %}
+                {% assign tag_size = 'tag-size-5' %}
+            {% elsif tag_count >= 7 %}
+                {% assign tag_size = 'tag-size-4' %}
+            {% elsif tag_count >= 5 %}
+                {% assign tag_size = 'tag-size-3' %}
+            {% elsif tag_count >= 3 %}
+                {% assign tag_size = 'tag-size-2' %}
+            {% else %}
+                {% assign tag_size = 'tag-size-1' %}
+            {% endif %}
+            
+            {% assign display_name = tag_name | replace: '-', ' ' | capitalize %}
+            
+            <a href="/tags/{{ tag_name | slugify }}" 
+               class="tag-item {{ tag_size }}" 
+               title="{{ tag_count }} posts">
+                {{ display_name }}
+            </a>
+        {% endfor %}
+    </div>
+    
+    <div class="tag-cloud-footer" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; text-align: center;">
+        <small>
+            <a href="/tags" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">View all topics →</a>
+        </small>
+    </div>
+</div>
