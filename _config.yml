@@ -5,7 +5,7 @@ url: "https://yourusername.github.io"
 author:
   name: "Ronnie Bailey"
   title: "Cybersecurity Architect & Policy Advisor"
-  bio: "10+ years securing enterprise systems while advising policymakers"
+  bio: "10+ years securing enterprise systems while advising policymakers on technical implementations. Currently focused on AI governance and cloud identity management."
   credentials: ["CISSP", "CIPP/E"]
 
 # Build settings
@@ -30,3 +30,13 @@ defaults:
     values:
       layout: "post"
       author: "Ronnie Bailey"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
