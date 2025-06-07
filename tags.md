@@ -1,15 +1,13 @@
 ---
 layout: page
-title: Blog Tags
+title: Popular Topics
 permalink: /tags/
 ---
 
-<div id="tag-cloud">
-  {% include tag-cloud.html %}
-</div>
+{% include categorized-tag-cloud.html %}
 
 {% for tag in site.tags %}
-<section id="{{ tag[0] | slugify }}" class="tag-section">
+<section id="{{ tag[0] | slugify }}">
   <h2>{{ tag[0] }}</h2>
   <ul class="post-list">
     {% for post in tag[1] %}
