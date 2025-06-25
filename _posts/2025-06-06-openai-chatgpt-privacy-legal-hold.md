@@ -5,7 +5,7 @@ date: 2025-06-06
 categories: [policy]
 tags: [data-retention, privacy, IAM, legal-hold, compliance]
 excerpt: "A federal judge’s ruling to preserve deleted ChatGPT logs spotlights a growing clash between privacy expectations and legal mandates in AI systems."
-featured_image: "https://github.com/user-attachments/assets/be83494c-222a-4d44-a434-2246f58b8c89"
+featured_image: "Screenshotrgr4.png"
 read_time: 12
 category_display: "Policy"
 author: "Ronnie Bailey"
