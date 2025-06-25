@@ -5,7 +5,7 @@ date: 2025-05-29
 categories: [case-study, policy]
 tags: [federal-layoffs, insider-threats, social-engineering, ai-recruiting, workforce-security, cybersecurity]
 excerpt: "Federal layoffs create unprecedented cybersecurity vulnerabilities as displaced government employees enter an AI-saturated job market without proper knowledge sanitization protocols"
-featured_image: "https://github.com/user-attachments/assets/d77a94c0-d949-4f38-a9da-ec50f4246a97"
+featured_image: "1747632246971-2.jpeg"
 read_time: 12
 category_display: "Case Study"
 author: "Ronnie Bailey"
