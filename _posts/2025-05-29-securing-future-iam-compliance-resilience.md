@@ -5,7 +5,7 @@ date: 2025-05-29
 categories: [tech]
 tags: [IAM, zero-trust, DORA, compliance, cybersecurity]
 excerpt: "Global regulations demand resilient IAM systems - discover if yours meets Zero Trust standards and regulatory compliance."
-featured_image: "https://github.com/user-attachments/assets/253dcbb8-3d67-4375-b6a5-a486cd05fb9e"
+featured_image: "1706246504050-2.jpeg"
 read_time: 10
 category_display: "Technology"
 author: "Ronnie Bailey"
