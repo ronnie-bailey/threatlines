@@ -5,7 +5,7 @@ date: 2024-01-15
 categories: [case-study, policy]
 tags: [retail-surveillance, facial-recognition, dynamic-pricing, data-brokers, privacy-compliance]
 excerpt: "How Kroger monetized surveillance infrastructure to power dynamic pricing, loyalty manipulation, and a $450M data business."
-featured_image: https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&h=300&fit=crop
+featured_image: "1729107029162.jpeg" https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&h=300&fit=crop
 read_time: 15
 category_display: "Case Study"
 author: "Ronnie Bailey"
