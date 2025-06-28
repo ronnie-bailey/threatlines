@@ -761,70 +761,103 @@ body {
 
 
 
-/* Cyber Hero Styles */
+/* === Cyber Glitch Hero === */
 .cyber-hero {
   position: relative;
   height: 80vh;
-  overflow: hidden;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #00ffff;
+  overflow: hidden;
+  color: #0ff;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.hero-video {
+.cyber-hero .glitch-bg {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  opacity: 0.15; /* Adjust for subtle animation */
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: #000000;
-  opacity: 0.85;
+  background: url('/assets/media/tumblr_n7nns1po1b1tddjl4o1_500.gif') center/cover repeat;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.cyber-hero .hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #000 40%, #0ff 120%);
+  mix-blend-mode: overlay;
+  opacity: 0.2;
   z-index: 1;
 }
 
 .cyber-hero .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
   padding: 2rem;
+  max-width: 800px;
 }
 
 .cyber-hero h1 {
   font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.cyber-hero h1::before,
+.cyber-hero h1::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.cyber-hero h1::before {
+  color: #f0f;
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+.cyber-hero h1::after {
+  color: #0f0;
+  animation: glitch 1.5s infinite linear alternate-reverse;
 }
 
 .cyber-hero p {
   font-size: 1.2rem;
-  opacity: 0.8;
+  opacity: 0.85;
   margin-bottom: 2rem;
 }
 
 .cyber-hero .cta-button {
+  display: inline-block;
   background: transparent;
-  border: 2px solid #00ffff;
-  color: #00ffff;
+  border: 2px solid #0ff;
+  color: #0ff;
   padding: 0.75rem 2rem;
-  border-radius: 5px;
+  border-radius: 3px;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .cyber-hero .cta-button:hover {
-  background: #00ffff;
-  color: #000000;
+  background: #0ff;
+  color: #000;
+}
+
+@keyframes glitch {
+  0% { clip: rect(20px, 9999px, 30px, 0); }
+  20% { clip: rect(10px, 9999px, 50px, 0); }
+  40% { clip: rect(60px, 9999px, 70px, 0); }
+  60% { clip: rect(30px, 9999px, 80px, 0); }
+  80% { clip: rect(40px, 9999px, 90px, 0); }
+  100% { clip: rect(10px, 9999px, 40px, 0); }
 }
