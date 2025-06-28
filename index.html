@@ -20,26 +20,23 @@ layout: default
             <h2>🏷️ Popular Topics</h2>
             <div class="tag-cloud">
                 <div class="tag-list">
-                    <a href="/tags#zero-trust" class="tag-item tag-size-5">Zero Trust</a>
-                    <a href="/tags/cloud-security" class="tag-item tag-size-5">Cloud Security</a>
-                    <a href="/tags/surveillance-pricing" class="tag-item tag-size-4">Surveillance Pricing</a>
-                    <a href="/tags/data-privacy" class="tag-item tag-size-4">Data Privacy</a>
-                    <a href="/tags/identity-management" class="tag-item tag-size-4">Identity Management</a>
-                    <a href="/tags/ai-regulation" class="tag-item tag-size-3">AI Regulation</a>
-                    <a href="/tags/compliance" class="tag-item tag-size-3">Compliance</a>
-                    <a href="/tags/threat-analysis" class="tag-item tag-size-3">Threat Analysis</a>
-                    <a href="/tags/incident-response" class="tag-item tag-size-2">Incident Response</a>
-                    <a href="/tags/policy-analysis" class="tag-item tag-size-2">Policy Analysis</a>
-                    <a href="/tags/facial-recognition" class="tag-item tag-size-2">Facial Recognition</a>
-                    <a href="/tags/retail-surveillance" class="tag-item tag-size-1">Retail Surveillance</a>
-                    <a href="/tags/crowdstrike" class="tag-item tag-size-2">CrowdStrike</a>
-                    <a href="/tags/kroger" class="tag-item tag-size-2">Kroger</a>
-                    <a href="/tags/ftc" class="tag-item tag-size-1">FTC</a>
-                    <a href="/tags/gdpr" class="tag-item tag-size-2">GDPR</a>
-                    <a href="/tags/microsoft" class="tag-item tag-size-3">Microsoft</a>
-                    <a href="/tags/azure" class="tag-item tag-size-3">Azure</a>
-                    <a href="/tags/aws" class="tag-item tag-size-2">AWS</a>
-                    <a href="/tags/okta" class="tag-item tag-size-2">Okta</a>
+                    <a href="{{ '/tags' | relative_url }}#cloud-security" class="tag-item tag-size-5">Cloud Security</a>
+                    <a href="{{ '/tags' | relative_url }}#surveillance-pricing" class="tag-item tag-size-4">Surveillance Pricing</a>
+                    <a href="{{ '/tags' | relative_url }}#data-privacy" class="tag-item tag-size-4">Data Privacy</a>
+                    <a href="{{ '/tags' | relative_url }}#ai-regulation" class="tag-item tag-size-3">AI Regulation</a>
+                    <a href="{{ '/tags' | relative_url }}#compliance" class="tag-item tag-size-3">Compliance</a>
+                    <a href="{{ '/tags' | relative_url }}#threat-analysis" class="tag-item tag-size-3">Threat Analysis</a>
+                    <a href="{{ '/tags' | relative_url }}#policy-analysis" class="tag-item tag-size-2">Policy Analysis</a>
+                    <a href="{{ '/tags' | relative_url }}#facial-recognition" class="tag-item tag-size-2">Facial Recognition</a>
+                    <a href="{{ '/tags' | relative_url }}#retail-surveillance" class="tag-item tag-size-2">Retail Surveillance</a>
+                    <a href="{{ '/tags' | relative_url }}#crowdstrike" class="tag-item tag-size-2">CrowdStrike</a>
+                    <a href="{{ '/tags' | relative_url }}#kroger" class="tag-item tag-size-2">Kroger</a>
+                    <a href="{{ '/tags' | relative_url }}#ftc" class="tag-item tag-size-1">FTC</a>
+                    <a href="{{ '/tags' | relative_url }}#gdpr" class="tag-item tag-size-2">GDPR</a>
+                    <a href="{{ '/tags' | relative_url }}#microsoft" class="tag-item tag-size-3">Microsoft</a>
+                    <a href="{{ '/tags' | relative_url }}#azure" class="tag-item tag-size-3">Azure</a>
+                    <a href="{{ '/tags' | relative_url }}#aws" class="tag-item tag-size-2">AWS</a>
+                    <a href="{{ '/tags' | relative_url }}#okta" class="tag-item tag-size-2">Okta</a>
                 </div>
             </div>
         </section>
@@ -48,34 +45,34 @@ layout: default
         <section class="featured-section">
             <h2>Featured Analysis</h2>
             <div class="featured-grid">
-                <a href="/blog/kroger-surveillance/" class="featured-card">
-                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=400&h=200&fit=crop" alt="Kroger Surveillance Analysis" class="featured-image">
+                <a href="{{ '/blog/kroger-surveillance/' | relative_url }}" class="featured-card">
+                    <img src="{{ '/cyberpolicyblog/Banners/1729107029162.jpeg' | relative_url }}" alt="Kroger Surveillance Analysis" class="featured-image">
                     <div class="featured-content">
                         <span class="category-tag case-study-tag">Case Study</span>
-                        <h3 class="featured-title">Kroger's Data Practices: Surveillance, Pricing, and Privacy</h3>
-                        <p class="featured-excerpt">Deep analysis of Kroger's $450M data monetization empire and its impact on consumer privacy...</p>
-                        <div class="article-meta">
-                            <span>{{ site.author.name }}</span>
-                            <span>•</span>
-                            <span>12 min read</span>
-                            <span>•</span>
-                            <span>5 diagrams</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="/blog/zero-trust-implementation/" class="featured-card">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=200&fit=crop" alt="Zero Trust Architecture" class="featured-image">
-                    <div class="featured-content">
-                        <span class="category-tag tech-tag">Technical Deep Dive</span>
-                        <h3 class="featured-title">Zero Trust Implementation: From Theory to Practice</h3>
-                        <p class="featured-excerpt">Comprehensive guide to deploying Zero Trust architecture in enterprise environments...</p>
+                        <h3 class="featured-title">Surveillance-Driven Pricing: Kroger's $450M Data Empire</h3>
+                        <p class="featured-excerpt">How Kroger monetized surveillance infrastructure to power dynamic pricing, loyalty manipulation, and a $450M data business...</p>
                         <div class="article-meta">
                             <span>{{ site.author.name }}</span>
                             <span>•</span>
                             <span>15 min read</span>
                             <span>•</span>
-                            <span>Code examples</span>
+                            <span>Case Study</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{{ '/blog/securing-future-iam-compliance-resilience/' | relative_url }}" class="featured-card">
+                    <img src="{{ '/cyberpolicyblog/Banners/1706246504050-2.jpeg' | relative_url }}" alt="IAM Compliance" class="featured-image">
+                    <div class="featured-content">
+                        <span class="category-tag tech-tag">Technology</span>
+                        <h3 class="featured-title">Securing the Future: IAM Compliance and Resilience</h3>
+                        <p class="featured-excerpt">Global regulations demand resilient IAM systems - discover if yours meets Zero Trust standards and regulatory compliance...</p>
+                        <div class="article-meta">
+                            <span>{{ site.author.name }}</span>
+                            <span>•</span>
+                            <span>10 min read</span>
+                            <span>•</span>
+                            <span>Technical Guide</span>
                         </div>
                     </div>
                 </a>
@@ -89,9 +86,11 @@ layout: default
                 {% for post in site.posts limit:6 %}
                 <a href="{{ post.url | relative_url }}" class="article-card {{ post.categories[0] }}">
                     {% if post.featured_image %}
-                    <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}" class="article-preview-image">
+                    <img src="{{ '/cyberpolicyblog/' | append: post.featured_image }}" alt="{{ post.title }}" class="article-preview-image">
                     {% else %}
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=180&fit=crop" alt="{{ post.title }}" class="article-preview-image">
+                    <div class="placeholder-image">
+                        {{ post.category_display | default: 'Article' }}
+                    </div>
                     {% endif %}
                     <div class="article-content">
                         {% if post.categories[0] == 'tech' %}
