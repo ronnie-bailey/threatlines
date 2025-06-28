@@ -757,3 +757,74 @@ body {
         padding: 1rem;
     }
 }
+
+
+
+
+/* Cyber Hero Styles */
+.cyber-hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #00ffff;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.15; /* Adjust for subtle animation */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.cyber-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.cyber-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cyber-hero p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.cyber-hero .cta-button {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.cyber-hero .cta-button:hover {
+  background: #00ffff;
+  color: #000000;
+}
