@@ -5,7 +5,7 @@ date: 2025-06-28
 categories: [policy]
 tags: [Facial Recognition, Surveillance, Police Accountability, Privacy, Civil Liberties]
 excerpt: "A new DIY face recognition site lets the public ID masked LAPD officers, raising fresh questions about community counter-surveillance, privacy, and tech ethics."
-featured_image: "Banners/facescan.jpg"
+featured_image: "Banners/facescan.png"
 read_time: 15
 category_display: "Policy Analysis"
 author: "Ronnie Bailey"
