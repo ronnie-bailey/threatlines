@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Refined Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     {% seo %}
 </head>
@@ -14,11 +19,12 @@
         <nav class="nav-container">
             <a href="{{ '/' | relative_url }}" class="logo">{{ site.title }}</a>
             <div class="nav-links">
-                <a href="{{ '/analysis' | relative_url }}">Threat Analysis</a>
-                <a href="{{ '/policy' | relative_url }}">Policy Insights</a>
-                <a href="{{ '/case-studies' | relative_url }}">Case Studies</a>
-                <a href="{{ '/about' | relative_url }}">About</a>
-                <a href="{{ '/contact' | relative_url }}">Contact</a>
+                <a href="{{ '/analysis' | relative_url }}">threat-analysis</a>
+                <a href="{{ '/policy' | relative_url }}">policy-insights</a>
+                <a href="{{ '/case-studies' | relative_url }}">case-studies</a>
+                <a href="{{ '/tags' | relative_url }}">all-topics</a>
+                <a href="{{ '/about' | relative_url }}">about</a>
+                <a href="{{ '/contact' | relative_url }}">contact</a>
             </div>
         </nav>
     </header>
@@ -30,37 +36,39 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>About {{ site.title }}</h4>
-                <p>{{ site.description }}</p>
-                <a href="{{ '/about' | relative_url }}">Our Mission</a>
-                <a href="{{ '/methodology' | relative_url }}">Research Methodology</a>
-            </div>
-            <div class="footer-section">
-                <h4>Categories</h4>
-                <a href="{{ '/technical' | relative_url }}">Technical Analysis</a>
-                <a href="{{ '/policy' | relative_url }}">Policy Insights</a>
+                <h4>// analysis</h4>
+                <a href="{{ '/technical' | relative_url }}">Technical Deep Dives</a>
+                <a href="{{ '/policy' | relative_url }}">Policy Intelligence</a>
                 <a href="{{ '/case-studies' | relative_url }}">Case Studies</a>
-                <a href="{{ '/executive-briefs' | relative_url }}">Executive Briefs</a>
+                <a href="{{ '/executive-briefs' | relative_url }}">Executive Briefings</a>
             </div>
             <div class="footer-section">
-                <h4>Connect</h4>
-                <a href="{{ '/newsletter' | relative_url }}">Newsletter</a>
-                <a href="{{ '/contact' | relative_url }}">Contact</a>
-                <a href="{{ '/speaking' | relative_url }}">Speaking Requests</a>
-                <a href="{{ '/.well-known/security.txt' | relative_url }}">Security Policy</a>
+                <h4>// expertise</h4>
+                <a href="{{ '/zero-trust' | relative_url }}">Zero Trust Architecture</a>
+                <a href="{{ '/iam' | relative_url }}">Identity & Access Management</a>
+                <a href="{{ '/compliance' | relative_url }}">Regulatory Compliance</a>
+                <a href="{{ '/threat-analysis' | relative_url }}">Threat Intelligence</a>
             </div>
             <div class="footer-section">
-                <h4>Compliance</h4>
+                <h4>// resources</h4>
+                <a href="{{ '/methodology' | relative_url }}">Research Methodology</a>
+                <a href="{{ '/frameworks' | relative_url }}">Security Frameworks</a>
+                <a href="{{ '/newsletter' | relative_url }}">Intelligence Briefings</a>
+                <a href="{{ '/speaking' | relative_url }}">Speaking Engagements</a>
+            </div>
+            <div class="footer-section">
+                <h4>// security</h4>
                 <a href="{{ '/privacy' | relative_url }}">Privacy Policy</a>
                 <a href="{{ '/terms' | relative_url }}">Terms of Use</a>
-                <a href="{{ '/accessibility' | relative_url }}">Accessibility</a>
-                <p style="margin-top: 1rem;">
-                    <small>Compliant with GDPR • CCPA • Section 508</small>
+                <a href="{{ '/security' | relative_url }}">Security Disclosure</a>
+                <a href="{{ '/.well-known/security.txt' | relative_url }}">security.txt</a>
+                <p style="margin-top: 1rem; font-size: 0.8rem;">
+                    <small>SOC2 • ISO27001 • GDPR Compliant</small>
                 </p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 {{ site.title }} • Built with Jekyll • Hosted on GitHub Pages</p>
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }} • Secure Intelligence • Powered by Jekyll</p>
         </div>
     </footer>
 
