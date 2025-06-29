@@ -896,37 +896,6 @@ h2::before {
     }
 }
 
-/* Force override ALL white backgrounds */
-* {
-    background-color: inherit !important;
-}
-
-html, body {
-    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%) !important;
-}
-
-/* Target common Jekyll/theme white backgrounds */
-.page-content,
-.wrapper,
-.site-content,
-article,
-.post,
-.content,
-.main-content,
-.post-wrapper,
-.container,
-main {
-    background: transparent !important;
-    background-color: transparent !important;
-}
-
-/* Ensure main sections use dark cards */
-.tag-cloud-section,
-.featured-section,
-.articles-section {
-    background: transparent;
-}
-
 /* Subtle animations for professional feel */
 @keyframes pulse-glow {
     0%, 100% { opacity: 0.3; }
@@ -945,4 +914,89 @@ main {
     opacity: 0.1;
     animation: pulse-glow 3s ease-in-out infinite;
     pointer-events: none;
+}
+
+/* CRITICAL OVERRIDES - These must be at the end to take precedence */
+/* Force override ALL white backgrounds with maximum specificity */
+html {
+    background: linear-gradient(135deg, #0f1419 0%, #0a0e27 100%) !important;
+}
+
+body {
+    background: linear-gradient(135deg, #0f1419 0%, #0a0e27 100%) !important;
+}
+
+/* Target ALL possible white background elements */
+.page-content,
+.wrapper,
+.site-content,
+article,
+.post,
+.content,
+.main-content,
+.post-wrapper,
+.container,
+main,
+.site-wrapper,
+.page-wrapper,
+.entry-content,
+.hfeed,
+.site,
+#main,
+#content,
+.minima-social-icons {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Jekyll Minima theme specific overrides */
+.site-header,
+.site-footer,
+.page-content .wrapper {
+    background: transparent !important;
+}
+
+/* Force card styles with maximum specificity */
+body .tag-cloud,
+body .featured-card,
+body .article-card,
+body .author-bio-sidebar,
+body .post-content,
+body .post-toc {
+    background: #2a3441 !important;
+    background-color: #2a3441 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Force text colors */
+body .tag-cloud *,
+body .featured-card *,
+body .article-card *,
+body .author-bio-sidebar *,
+body .post-content *,
+body .post-toc * {
+    color: inherit !important;
+}
+
+/* Specific text elements */
+body .featured-title,
+body .article-title,
+body .author-name,
+body .post-title,
+body h1, body h2, body h3, body h4, body h5, body h6 {
+    color: #e2e8f0 !important;
+}
+
+body .featured-excerpt,
+body .article-excerpt,
+body .author-bio,
+body .post-content p,
+body .post-content li {
+    color: #cbd5e0 !important;
+}
+
+body .article-meta,
+body .post-meta,
+body .contact-note {
+    color: #a0aec0 !important;
 }
