@@ -26,6 +26,9 @@
     --card-text-secondary: #4a5568;   /* Medium gray for body text */
     --card-text-tertiary: #718096;    /* Lighter gray for metadata */
     
+    /* Text for main page sections on dark background */
+    --section-header-text: #ffffff;   /* White for section headers on dark bg */
+    
     /* Card Backgrounds - Subtle tint, not pure white */
     --card-background: #f7fafc;       /* Very light blue-gray */
     --card-background-hover: #edf2f7; /* Slightly darker on hover */
@@ -256,11 +259,11 @@ body::before {
     gap: 3rem;
 }
 
-/* Section Headers */
+/* Section Headers - These appear on dark background */
 h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: var(--text-primary);
+    color: var(--text-primary);  /* White for dark background */
     font-weight: 700;
     position: relative;
     font-family: var(--font-sans);
@@ -536,7 +539,7 @@ h2::before {
 }
 
 .author-title {
-    color: var(--accent-cyan);
+    color: var(--card-text-secondary);  /* Darker cyan for better contrast */
     font-weight: 500;
     margin-bottom: 1rem;
     font-size: 0.95rem;
@@ -550,14 +553,14 @@ h2::before {
 }
 
 .credential-badge {
-    background: rgba(0, 212, 255, 0.15);
-    color: var(--accent-cyan);
+    background: rgba(29, 181, 132, 0.15);  /* Teal instead of cyan */
+    color: var(--accent-teal);  /* Darker teal color */
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
     font-size: 0.7rem;
     font-weight: 500;
     font-family: var(--font-mono);
-    border: 1px solid rgba(0, 212, 255, 0.3);
+    border: 1px solid rgba(29, 181, 132, 0.3);
 }
 
 .author-bio {
@@ -573,9 +576,10 @@ h2::before {
 }
 
 .contact-note a {
-    color: var(--accent-cyan);
+    color: var(--accent-teal);  /* Use teal instead of bright cyan */
     text-decoration: none;
     transition: var(--transition-smooth);
+    font-weight: 500;  /* Make it slightly bolder for better visibility */
 }
 
 .contact-note a:hover {
@@ -742,7 +746,7 @@ h2::before {
     padding-left: 0.5rem;
 }
 
-/* Content Styling */
+/* Content Styling - Post content appears on light background */
 .post-content h1,
 .post-content h2,
 .post-content h3,
@@ -750,10 +754,11 @@ h2::before {
     margin-top: 2rem;
     margin-bottom: 1rem;
     scroll-margin-top: 6rem;
-    color: var(--card-text-primary);
+    color: var(--card-text-primary);  /* Dark text for light background */
 }
 
 .post-content h2 {
+    color: var(--card-text-primary);  /* Dark text, not light */
     border-bottom: 2px solid var(--accent-cyan);
     padding-bottom: 0.5rem;
 }
@@ -765,7 +770,20 @@ h2::before {
 .post-content p {
     margin-bottom: 1rem;
     line-height: 1.7;
-    color: var(--card-text-secondary);
+    color: var(--card-text-secondary);  /* Dark text for light background */
+}
+
+.post-content li {
+    color: var(--card-text-secondary);  /* Add styling for list items */
+    margin-bottom: 0.5rem;
+}
+
+.post-content strong {
+    color: var(--card-text-primary);  /* Dark text for bold elements */
+}
+
+.post-content em {
+    color: var(--card-text-secondary);  /* Dark text for italic elements */
 }
 
 .post-content pre {
