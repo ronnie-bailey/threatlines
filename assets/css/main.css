@@ -156,7 +156,7 @@ body::before {
 /* Hero Section */
 .hero {
     background: 
-        linear-gradient(135deg, rgba(15, 23, 42, 0.35) 0%, rgba(10, 14, 39, 0.45) 100%),
+        linear-gradient(135deg, rgba(15, 23, 42, 0.08) 0%, rgba(10, 14, 39, 0.15) 100%),
         url('/cyberpolicyblog/static.jpg');
     background-size: cover;
     background-position: center;
