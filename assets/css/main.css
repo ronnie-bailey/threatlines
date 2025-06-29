@@ -283,12 +283,12 @@ h2::before {
 
 /* Tag Cloud Section */
 .tag-cloud {
-    background: var(--card-background);
+    background: var(--card-background) !important;
     border-radius: 12px;
     padding: 2rem;
     border: 1px solid var(--border-subtle);
     position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .tag-cloud::before {
@@ -374,7 +374,7 @@ h2::before {
 
 .featured-card,
 .article-card {
-    background: var(--card-background);
+    background: var(--card-background) !important;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--border-subtle);
@@ -382,7 +382,7 @@ h2::before {
     text-decoration: none;
     color: inherit;
     position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .featured-card::before,
@@ -500,14 +500,14 @@ h2::before {
 
 /* Right Column - Author Bio */
 .author-bio-sidebar {
-    background: var(--card-background);
+    background: var(--card-background) !important;
     border-radius: 12px;
     padding: 2rem;
     border: 1px solid var(--border-subtle);
     height: fit-content;
     position: sticky;
     top: 6rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .author-section {
@@ -896,19 +896,35 @@ h2::before {
     }
 }
 
-/* Override any remaining white backgrounds */
+/* Force override ALL white backgrounds */
+* {
+    background-color: inherit !important;
+}
+
+html, body {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%) !important;
+}
+
+/* Target common Jekyll/theme white backgrounds */
 .page-content,
 .wrapper,
 .site-content,
-article {
-    background: transparent !important;
-}
-
-/* Ensure all content areas use dark theme */
+article,
+.post,
 .content,
 .main-content,
-.post-wrapper {
+.post-wrapper,
+.container,
+main {
     background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Ensure main sections use dark cards */
+.tag-cloud-section,
+.featured-section,
+.articles-section {
+    background: transparent;
 }
 
 /* Subtle animations for professional feel */
