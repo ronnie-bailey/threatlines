@@ -1,144 +1,42 @@
----
-layout: default
----
+title: "Threat Lines"
+description: "More Than Headlines. It's Threat Lines"
+baseurl: "/cyberpolicyblog"
+url: "https://ronnie-bailey.github.io"
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>More Than Headlines. It's Threat Lines</h1>
-        <p>Deep intelligence analysis for cybersecurity professionals who navigate both technical implementation and strategic policy decisions.</p>
-        <a href="#content" class="cta-button">Access Latest Intelligence</a>
-    </div>
-</section>
+author: 
+  name: "Ronnie Bailey" 
+  title: "Cybersecurity Architect & Policy Advisor"
+  bio: "10+ years securing enterprise systems while advising policymakers on technical implementations. Currently focused on AI governance and cloud identity management."
+  credentials: ["CISSP", "CIPP/E"]
 
-<!-- Main Content -->
-<div class="main-container" id="content">
-    <!-- Left Column -->
-    <div class="left-column">
-        <!-- Tag Cloud Section -->
-        <section class="tag-cloud-section">
-            <h2>🏷️ Domain Expertise</h2>
-            <div class="tag-cloud">
-                <div class="tag-list">
-                    <a href="{{ '/tags' | relative_url }}#cloud-security" class="tag-item tag-size-5" title="9 articles">cloud-security</a>
-                    <a href="{{ '/tags' | relative_url }}#surveillance-pricing" class="tag-item tag-size-4" title="6 articles">surveillance-pricing</a>
-                    <a href="{{ '/tags' | relative_url }}#data-privacy" class="tag-item tag-size-4" title="7 articles">data-privacy</a>
-                    <a href="{{ '/tags' | relative_url }}#iam" class="tag-item tag-size-4" title="6 articles">iam</a>
-                    <a href="{{ '/tags' | relative_url }}#zero-trust" class="tag-item tag-size-4" title="5 articles">zero-trust</a>
-                    <a href="{{ '/tags' | relative_url }}#ai-regulation" class="tag-item tag-size-3" title="4 articles">ai-regulation</a>
-                    <a href="{{ '/tags' | relative_url }}#compliance" class="tag-item tag-size-3" title="4 articles">compliance</a>
-                    <a href="{{ '/tags' | relative_url }}#threat-analysis" class="tag-item tag-size-3" title="5 articles">threat-analysis</a>
-                    <a href="{{ '/tags' | relative_url }}#incident-response" class="tag-item tag-size-2" title="3 articles">incident-response</a>
-                    <a href="{{ '/tags' | relative_url }}#policy-analysis" class="tag-item tag-size-2" title="3 articles">policy-analysis</a>
-                    <a href="{{ '/tags' | relative_url }}#facial-recognition" class="tag-item tag-size-2" title="2 articles">facial-recognition</a>
-                    <a href="{{ '/tags' | relative_url }}#retail-surveillance" class="tag-item tag-size-2" title="2 articles">retail-surveillance</a>
-                    <a href="{{ '/tags' | relative_url }}#crowdstrike" class="tag-item tag-size-2" title="3 articles">crowdstrike</a>
-                    <a href="{{ '/tags' | relative_url }}#kroger" class="tag-item tag-size-2" title="2 articles">kroger</a>
-                    <a href="{{ '/tags' | relative_url }}#microsoft" class="tag-item tag-size-3" title="4 articles">microsoft</a>
-                    <a href="{{ '/tags' | relative_url }}#azure" class="tag-item tag-size-3" title="5 articles">azure</a>
-                    <a href="{{ '/tags' | relative_url }}#aws" class="tag-item tag-size-2" title="4 articles">aws</a>
-                    <a href="{{ '/tags' | relative_url }}#okta" class="tag-item tag-size-2" title="3 articles">okta</a>
-                    <a href="{{ '/tags' | relative_url }}#gdpr" class="tag-item tag-size-2" title="3 articles">gdpr</a>
-                    <a href="{{ '/tags' | relative_url }}#ftc" class="tag-item tag-size-1" title="2 articles">ftc</a>
-                </div>
-            </div>
-        </section>
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
 
-        <!-- Featured Analysis -->
-        <section class="featured-section">
-            <h2>⚡ Featured Intelligence</h2>
-            <div class="featured-grid">
-                <a href="{{ '/2024/01/15/kroger-surveillance-analysis.html' | relative_url }}" class="featured-card">
-                    <img src="{{ '/cyberpolicyblog/Banners/1729107029162.jpeg' | relative_url }}" alt="Kroger Surveillance Analysis" class="featured-image">
-                    <div class="featured-content">
-                        <span class="category-tag case-study-tag">case-study</span>
-                        <h3 class="featured-title">Surveillance-Driven Pricing: Kroger's $450M Data Empire</h3>
-                        <p class="featured-excerpt">Deep dive into how America's largest supermarket chain monetized facial recognition and dynamic pricing algorithms to build a massive surveillance infrastructure...</p>
-                        <div class="article-meta">
-                            <span>{{ site.author.name }}</span>
-                            <span>•</span>
-                            <span>15 min read</span>
-                            <span>•</span>
-                            <span>technical implementation</span>
-                        </div>
-                    </div>
-                </a>
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-                <a href="{{ '/2025/05/29/securing-future-iam-compliance-resilience.html' | relative_url }}" class="featured-card">
-                    <img src="{{ '/cyberpolicyblog/Banners/1706246504050-2.jpeg' | relative_url }}" alt="IAM Compliance Framework" class="featured-image">
-                    <div class="featured-content">
-                        <span class="category-tag tech-tag">technical</span>
-                        <h3 class="featured-title">Zero Trust IAM: DORA Compliance & Operational Resilience</h3>
-                        <p class="featured-excerpt">Navigate the intersection of Zero Trust architecture and global regulatory frameworks. Practical implementation guide for enterprise IAM systems...</p>
-                        <div class="article-meta">
-                            <span>{{ site.author.name }}</span>
-                            <span>•</span>
-                            <span>10 min read</span>
-                            <span>•</span>
-                            <span>compliance framework</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
 
-        <!-- Recent Articles -->
-        <section class="articles-section">
-            <h2>📡 Recent Analysis</h2>
-            <div class="articles-grid">
-                {% for post in site.posts limit:6 %}
-                <a href="{{ post.url | relative_url }}" class="article-card {{ post.categories[0] }}">
-                    {% if post.featured_image %}
-                    <img src="{{ '/cyberpolicyblog/' | append: post.featured_image }}" alt="{{ post.title }}" class="article-preview-image">
-                    {% else %}
-                    <div class="placeholder-image">
-                        {{ post.category_display | default: 'CLASSIFIED' }}
-                    </div>
-                    {% endif %}
-                    <div class="article-content">
-                        {% if post.categories[0] == 'tech' %}
-                        <span class="category-tag tech-tag">{{ post.category_display | default: 'technical' | downcase }}</span>
-                        {% elsif post.categories[0] == 'policy' %}
-                        <span class="category-tag policy-tag">{{ post.category_display | default: 'policy' | downcase }}</span>
-                        {% else %}
-                        <span class="category-tag case-study-tag">{{ post.category_display | default: 'case-study' | downcase }}</span>
-                        {% endif %}
-                        <h3 class="article-title">{{ post.title }}</h3>
-                        <p class="article-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-                        <div class="article-meta">
-                            <span>{{ post.author | default: site.author.name }}</span>
-                            <span>•</span>
-                            <span>{{ post.read_time | default: 5 }} min</span>
-                            <span>•</span>
-                            <span>{{ post.date | date: "%b %d" }}</span>
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-            </div>
-        </section>
-    </div>
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Ronnie Bailey"
 
-    <!-- Right Column - Author Bio -->
-    <aside class="author-bio-sidebar">
-        <div class="author-section">
-            <div class="author-avatar">{{ site.author.name | slice: 0, 2 | upcase }}</div>
-            <h3 class="author-name">{{ site.author.name }}</h3>
-            <p class="author-title">{{ site.author.title }}</p>
-            <div class="credentials">
-                {% for credential in site.author.credentials %}
-                <span class="credential-badge">{{ credential }}</span>
-                {% endfor %}
-            </div>
-            <p class="author-bio">{{ site.author.bio }}</p>
-        </div>
-
-        <div class="contact-note">
-            <strong>Available for:</strong><br>
-            • Technical assessments<br>
-            • Executive briefings<br>
-            • Policy consultation<br><br>
-            <a href="/contact">Secure communication channel →</a>
-        </div>
-    </aside>
-</div>
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
