@@ -896,6 +896,21 @@ h2::before {
     }
 }
 
+/* Override any remaining white backgrounds */
+.page-content,
+.wrapper,
+.site-content,
+article {
+    background: transparent !important;
+}
+
+/* Ensure all content areas use dark theme */
+.content,
+.main-content,
+.post-wrapper {
+    background: transparent !important;
+}
+
 /* Subtle animations for professional feel */
 @keyframes pulse-glow {
     0%, 100% { opacity: 0.3; }
