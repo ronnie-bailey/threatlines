@@ -32,7 +32,7 @@
     <!-- Main Content -->
     {{ content }}
 
-    <!-- Footer -->
+    <!-- Enhanced Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -42,31 +42,60 @@
                 <a href="{{ '/case-studies' | relative_url }}">Case Studies</a>
                 <a href="{{ '/executive-briefs' | relative_url }}">Executive Briefings</a>
             </div>
+            
+            <div class="footer-section">
+                <h4>// my work</h4>
+                <a href="{{ '/resume' | relative_url }}">My Career</a>
+                <a href="{{ '/labs' | relative_url }}">Labs & Projects</a>
+                <a href="{{ '/showcase' | relative_url }}">Showcase</a>
+                <a href="{{ '/docs' | relative_url }}">Documentation</a>
+                <a href="{{ '/speaking' | relative_url }}">Speaking Engagements</a>
+            </div>
+            
             <div class="footer-section">
                 <h4>// expertise</h4>
                 <a href="{{ '/zero-trust' | relative_url }}">Zero Trust Architecture</a>
                 <a href="{{ '/iam' | relative_url }}">Identity & Access Management</a>
                 <a href="{{ '/compliance' | relative_url }}">Regulatory Compliance</a>
                 <a href="{{ '/threat-analysis' | relative_url }}">Threat Intelligence</a>
-            </div>
-            <div class="footer-section">
-                <h4>// resources</h4>
-                <a href="{{ '/methodology' | relative_url }}">Research Methodology</a>
                 <a href="{{ '/frameworks' | relative_url }}">Security Frameworks</a>
                 <a href="{{ '/newsletter' | relative_url }}">Intelligence Briefings</a>
-                <a href="{{ '/speaking' | relative_url }}">Speaking Engagements</a>
             </div>
+            
             <div class="footer-section">
-                <h4>// security</h4>
+                <h4>// community & ethics</h4>
+                <a href="https://www.eff.org" target="_blank" rel="noopener">Electronic Frontier Foundation</a>
+                <a href="https://www.epic.org" target="_blank" rel="noopener">Electronic Privacy Information Center</a>
+                <a href="https://www.accessnow.org" target="_blank" rel="noopener">Access Now</a>
+                <a href="https://privacyinternational.org" target="_blank" rel="noopener">Privacy International</a>
+                <a href="https://foundation.mozilla.org" target="_blank" rel="noopener">Mozilla Foundation</a>
+                <a href="{{ '/disclosure' | relative_url }}">Responsible Disclosure</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>// professional orgs</h4>
+                <a href="https://www.isc2.org" target="_blank" rel="noopener">(ISC)² Security Community</a>
+                <a href="https://www.sans.org" target="_blank" rel="noopener">SANS Institute</a>
+                <a href="https://www.owasp.org" target="_blank" rel="noopener">OWASP Foundation</a>
+                <a href="https://www.isaca.org" target="_blank" rel="noopener">ISACA</a>
+                <a href="https://www.first.org" target="_blank" rel="noopener">FIRST (Forum of Incident Response)</a>
+                <a href="https://www.enisa.europa.eu" target="_blank" rel="noopener">ENISA</a>
+                <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">NIST Cybersecurity Framework</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>// security & legal</h4>
                 <a href="{{ '/privacy' | relative_url }}">Privacy Policy</a>
                 <a href="{{ '/terms' | relative_url }}">Terms of Use</a>
                 <a href="{{ '/security' | relative_url }}">Security Disclosure</a>
+                <a href="{{ '/disclosure' | relative_url }}">Responsible Disclosure</a>
                 <a href="{{ '/.well-known/security.txt' | relative_url }}">security.txt</a>
                 <p style="margin-top: 1rem; font-size: 0.8rem;">
                     <small>SOC2 • ISO27001 • GDPR Compliant</small>
                 </p>
             </div>
         </div>
+        
         <div class="footer-bottom">
             <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }} • Secure Intelligence • Powered by Jekyll</p>
         </div>
