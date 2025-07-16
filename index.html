@@ -49,10 +49,10 @@ layout: default
             <h2>⚡ Featured Intelligence</h2>
             <div class="featured-grid">
                 <a href="{{ '/cyberpolicyblog/blog/accountability-vs-anonymity/' | relative_url }}" class="featured-card">
-                    <img src="/assets/images/banners/622.png" alt="Accountability vs. Anonymity" class="featured-image">
+                    
                     <div class="featured-content">
                         <span class="category-tag case-study-tag">Surveillance</span>
-                        <h3 class="featured-title">Accountability vs. Anonymity: A Deep Dive into Community-Built Facial Recognition Tools</h3>
+                        <img src="{{ '/assets/images/banners/622.png' | relative_url }}" alt="Accountability vs. Anonymity" class="featured-image">
                         <p class="featured-excerpt">A new DIY face recognition site lets the public ID masked LAPD officers, raising fresh questions about community counter-surveillance, privacy, and tech ethics....</p>
                         <div class="article-meta">
                             <span>{{ site.author.name }}</span>
@@ -65,7 +65,7 @@ layout: default
                 </a>
 
                 <a href="{{ '/cyberpolicyblog/tech/technical/2025/05/29/securing-future-iam-compliance-resilience.html' | relative_url }}" class="featured-card">
-                    <img src="/assets/images/banners/620.jpeg" alt="IAM Compliance Framework" class="featured-image">
+                    <img src="{{ '/assets/images/banners/620.jpeg' | relative_url }}" alt="IAM Compliance Framework" class="featured-image">
                     <div class="featured-content">
                         <span class="category-tag tech-tag">technical</span>
                         <h3 class="featured-title">Zero Trust IAM: DORA Compliance & Operational Resilience</h3>
@@ -89,7 +89,7 @@ layout: default
                 {% for post in site.posts limit:6 %}
                 <a href="{{ post.url | relative_url }}" class="article-card {{ post.categories[0] }}">
                     {% if post.featured_image %}
-                    <img src="/assets/images/banners/{{ post.featured_image }}" alt="{{ post.title }}" class="article-preview-image">
+                    <img src="{{ '/assets/images/banners/' | append: post.featured_image | relative_url }}" alt="{{ post.title }}" class="article-preview-image">
                     {% else %}
                     <div class="placeholder-image">
                         {{ post.category_display | default: 'CLASSIFIED' }}
