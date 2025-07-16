@@ -47,6 +47,44 @@ body .post-content img:first-child {
     border: 2px solid rgba(0, 212, 255, 0.3) !important;
 }
 
+/* BANNER IMAGE FIX - Maximum specificity to override everything */
+body .post-content img,
+body .featured-image,
+body .article-preview-image,
+body .post-featured-image,
+body img[src*="banners"],
+body img[src*="assets/images"],
+.post img,
+.post-content img,
+article img,
+main img,
+.content img {
+    width: 644px !important;
+    height: 255px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 8px !important;
+    display: block !important;
+    margin: 1.5rem auto !important;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2) !important;
+    border: 2px solid rgba(0, 212, 255, 0.3) !important;
+}
+
+/* Force override for any Jekyll/Minima theme image styles */
+html body .post-content img,
+html body article img,
+html body main img,
+html body .content img,
+html body [src*="banners"],
+html body [src*="assets/images"] {
+    width: 644px !important;
+    height: 255px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    max-width: 644px !important;
+    max-height: 255px !important;
+}
+
 /* Responsive behavior for banner images */
 @media (max-width: 768px) {
     .featured-image,
@@ -56,7 +94,13 @@ body .post-content img:first-child {
     img[alt*="banner"],
     img[src*="/banners/"],
     body .post-content img:first-child,
-    .post-content img[src*="/banners/"] {
+    .post-content img[src*="/banners/"],
+    body .post-content img,
+    body .featured-image,
+    body .article-preview-image,
+    body img[src*="banners"],
+    html body .post-content img,
+    html body article img {
         width: 100% !important;
         height: auto !important;
         max-width: 644px !important;
@@ -72,7 +116,13 @@ body .post-content img:first-child {
     img[alt*="banner"],
     img[src*="/banners/"],
     body .post-content img:first-child,
-    .post-content img[src*="/banners/"] {
+    .post-content img[src*="/banners/"],
+    body .post-content img,
+    body .featured-image,
+    body .article-preview-image,
+    body img[src*="banners"],
+    html body .post-content img,
+    html body article img {
         width: 100% !important;
         height: auto !important;
         aspect-ratio: 644/255 !important;
