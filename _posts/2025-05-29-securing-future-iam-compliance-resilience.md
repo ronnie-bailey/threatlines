@@ -8,7 +8,7 @@ excerpt: "Global regulations demand resilient IAM systems - discover if yours me
 read_time: 10
 category_display: "Technology"
 author: "Ronnie Bailey"
-featured_image: "620.png"
+featured_image: "620.jpeg"
 ---
 
 ## Executive Summary
