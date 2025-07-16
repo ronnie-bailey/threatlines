@@ -1,42 +1,21 @@
-/* Add this section to your main.css file - place it after the existing image styles */
+/* Simple, Safe Banner Image Fix - Only targets specific banner images */
 
-/* Banner Image Constraints - Standardize ONLY banner images to 644x255 */
-.featured-image,
-.article-preview-image,
-.post-featured-image {
-    width: 644px !important;
-    height: 255px !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    border-radius: 8px !important;
-    display: block !important;
-    margin: 0 auto 1.5rem auto !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
-    border: 1px solid var(--border-subtle) !important;
-}
-
-/* Override existing featured/article image styles to use new dimensions */
+/* Homepage featured images only */
 .featured-card .featured-image,
 .article-card .article-preview-image {
     width: 644px !important;
     height: 255px !important;
     object-fit: cover !important;
+    object-position: center !important;
     transition: var(--transition-smooth) !important;
 }
 
-/* Ensure hover effects still work with new dimensions */
-.featured-card:hover .featured-image,
-.article-card:hover .article-preview-image {
-    transform: scale(1.02) !important;  /* Reduced scale to prevent overflow */
-}
-
-/* Post content banner images - ONLY target banners folder images */
-.post-content img[src*="/banners/"],
-body .post-content img[src*="/banners/"],
-html body .post-content img[src*="/banners/"],
-img[src*="assets/images/banners/"],
-body img[src*="assets/images/banners/"],
-html body img[src*="assets/images/banners/"] {
+/* Blog post banner images - very specific targeting */
+.post-content img[src*="789.jpeg"],
+.post-content img[src*="622.png"],
+.post-content img[src*="620.jpeg"],
+.post-content img[src*="858.jpeg"],
+.post-content img[src*="559.png"] {
     width: 644px !important;
     height: 255px !important;
     object-fit: cover !important;
@@ -44,37 +23,20 @@ html body img[src*="assets/images/banners/"] {
     border-radius: 8px !important;
     margin: 2rem auto !important;
     display: block !important;
-    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2) !important;
-    border: 2px solid rgba(0, 212, 255, 0.3) !important;
 }
 
-/* Responsive behavior - ONLY for banner images */
+/* Mobile responsive */
 @media (max-width: 768px) {
-    .featured-image,
-    .article-preview-image,
-    .post-featured-image,
-    .post-content img[src*="/banners/"],
-    body .post-content img[src*="/banners/"],
-    img[src*="assets/images/banners/"],
-    body img[src*="assets/images/banners/"] {
+    .featured-card .featured-image,
+    .article-card .article-preview-image,
+    .post-content img[src*="789.jpeg"],
+    .post-content img[src*="622.png"],
+    .post-content img[src*="620.jpeg"],
+    .post-content img[src*="858.jpeg"],
+    .post-content img[src*="559.png"] {
         width: 100% !important;
         height: auto !important;
         max-width: 644px !important;
         aspect-ratio: 644/255 !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .featured-image,
-    .article-preview-image,
-    .post-featured-image,
-    .post-content img[src*="/banners/"],
-    body .post-content img[src*="/banners/"],
-    img[src*="assets/images/banners/"],
-    body img[src*="assets/images/banners/"] {
-        width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 644/255 !important;
-        margin: 1rem auto !important;
     }
 }
