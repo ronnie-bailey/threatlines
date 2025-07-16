@@ -1,22 +1,22 @@
 /* Add this section to your main.css file - place it after the existing image styles */
 
-/* Banner Image Constraints - Standardize all banner images to 644x255 */
+/* Banner Image Constraints - ONLY target banner images specifically */
 .featured-image,
 .article-preview-image,
 .post-featured-image,
-.post img:first-of-type,
-img[alt*="banner"],
 img[src*="/banners/"],
-body .post-content img:first-child {
+img[src*="banners/"],
+body .post-content img[src*="/banners/"],
+body .post-content img[src*="banners/"] {
     width: 644px !important;
     height: 255px !important;
     object-fit: cover !important;
     object-position: center !important;
     border-radius: 8px !important;
     display: block !important;
-    margin: 0 auto 1.5rem auto !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
-    border: 1px solid var(--border-subtle) !important;
+    margin: 1.5rem auto !important;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2) !important;
+    border: 2px solid rgba(0, 212, 255, 0.3) !important;
 }
 
 /* Override existing featured/article image styles to use new dimensions */
@@ -34,35 +34,18 @@ body .post-content img:first-child {
     transform: scale(1.02) !important;  /* Reduced scale to prevent overflow */
 }
 
-/* Post content banner images (in actual blog posts) */
-.post-content img[src*="/banners/"] {
+/* Force override ONLY for banner images in posts */
+html body .post-content img[src*="/banners/"],
+html body .post-content img[src*="banners/"],
+html body article img[src*="/banners/"],
+html body article img[src*="banners/"],
+html body img[src*="/assets/images/banners/"] {
     width: 644px !important;
     height: 255px !important;
     object-fit: cover !important;
     object-position: center !important;
-    border-radius: 8px !important;
-    margin: 2rem auto !important;
-    display: block !important;
-    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2) !important;
-    border: 2px solid rgba(0, 212, 255, 0.3) !important;
-}
-
-/* BANNER IMAGE FIX - Maximum specificity to override everything */
-body .post-content img,
-body .featured-image,
-body .article-preview-image,
-body .post-featured-image,
-body img[src*="banners"],
-body img[src*="assets/images"],
-.post img,
-.post-content img,
-article img,
-main img,
-.content img {
-    width: 644px !important;
-    height: 255px !important;
-    object-fit: cover !important;
-    object-position: center !important;
+    max-width: 644px !important;
+    max-height: 255px !important;
     border-radius: 8px !important;
     display: block !important;
     margin: 1.5rem auto !important;
@@ -70,37 +53,17 @@ main img,
     border: 2px solid rgba(0, 212, 255, 0.3) !important;
 }
 
-/* Force override for any Jekyll/Minima theme image styles */
-html body .post-content img,
-html body article img,
-html body main img,
-html body .content img,
-html body [src*="banners"],
-html body [src*="assets/images"] {
-    width: 644px !important;
-    height: 255px !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    max-width: 644px !important;
-    max-height: 255px !important;
-}
-
-/* Responsive behavior for banner images */
+/* Responsive behavior for banner images ONLY */
 @media (max-width: 768px) {
     .featured-image,
     .article-preview-image,
     .post-featured-image,
-    .post img:first-of-type,
-    img[alt*="banner"],
     img[src*="/banners/"],
-    body .post-content img:first-child,
-    .post-content img[src*="/banners/"],
-    body .post-content img,
-    body .featured-image,
-    body .article-preview-image,
-    body img[src*="banners"],
-    html body .post-content img,
-    html body article img {
+    img[src*="banners/"],
+    body .post-content img[src*="/banners/"],
+    body .post-content img[src*="banners/"],
+    html body .post-content img[src*="/banners/"],
+    html body article img[src*="/banners/"] {
         width: 100% !important;
         height: auto !important;
         max-width: 644px !important;
@@ -112,17 +75,12 @@ html body [src*="assets/images"] {
     .featured-image,
     .article-preview-image,
     .post-featured-image,
-    .post img:first-of-type,
-    img[alt*="banner"],
     img[src*="/banners/"],
-    body .post-content img:first-child,
-    .post-content img[src*="/banners/"],
-    body .post-content img,
-    body .featured-image,
-    body .article-preview-image,
-    body img[src*="banners"],
-    html body .post-content img,
-    html body article img {
+    img[src*="banners/"],
+    body .post-content img[src*="/banners/"],
+    body .post-content img[src*="banners/"],
+    html body .post-content img[src*="/banners/"],
+    html body article img[src*="/banners/"] {
         width: 100% !important;
         height: auto !important;
         aspect-ratio: 644/255 !important;
