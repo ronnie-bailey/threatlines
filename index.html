@@ -88,13 +88,7 @@ layout: default
             <div class="articles-grid">
                 {% for post in site.posts limit:6 %}
                 <a href="{{ post.url | relative_url }}" class="article-card {{ post.categories[0] }}">
-                    {% if post.featured_image %}
-                    <img src="{{ '/assets/images/banners/' | append: post.featured_image | relative_url }}" alt="{{ post.title }}" class="article-preview-image">
-                    {% else %}
-                    <div class="placeholder-image">
-                        {{ post.category_display | default: 'CLASSIFIED' }}
-                    </div>
-                    {% endif %}
+                   <img src="{{ '/assets/images/banners/622.png' | relative_url }}" alt="{{ post.title }}" class="article-preview-image">
                     <div class="article-content">
                         {% if post.categories[0] == 'tech' %}
                         <span class="category-tag tech-tag">{{ post.category_display | default: 'technical' | downcase }}</span>
