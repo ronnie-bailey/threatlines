@@ -9,7 +9,7 @@ read_time: 15
 category_display: "Case Study"
 author: "Ronnie Bailey"
 permalink: /kroger-surveillance
-featured_image: "858.png"
+featured_image: "858.jpeg"
 ---
 
 ## Executive Summary
