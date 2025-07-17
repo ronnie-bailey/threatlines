@@ -188,7 +188,9 @@ layout: default
             {% endif %}
             
             {% if page.featured_image %}
-<img src="{{ '/assets/images/banners/' | append: page.featured_image | relative_url }}" alt="{{ page.title }}" class="post-banner">        </header>
+            <img src="{{ '/assets/images/banners/' | append: page.featured_image | relative_url }}" alt="{{ page.title }}" class="post-banner">
+            {% endif %}
+        </header>
 
         <div class="post-body">
             {{ content }}
