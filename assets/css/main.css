@@ -1326,3 +1326,13 @@ body .post-content .purple {
     color: #cbd5e0 !important;  /* Reset to standard text color */
     background: transparent !important;
 }
+
+/* Banner size fix for blog posts */
+body .post-content img[src*="/banners/"] {
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    margin: 1.5rem auto !important;
+}
