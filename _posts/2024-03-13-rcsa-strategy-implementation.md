@@ -9,7 +9,7 @@ read_time: 15
 category_display: "Technology & Strategy"
 author: "Ronnie Bailey"
 permalink: /rcsa-strategy
-featured_image: "[802.jpeg]"
+featured_image: "[802.png]"
 ---
 
 ## Executive Summary
